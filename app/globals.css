@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Bebas+Neue&family=DM+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+@theme {
+  --color-brand-bg: #FAFAF0;
+  --color-brand-blue: #1D4ED8;
+  --color-brand-purple: #6D28D9;
+  --color-brand-pink: #DB2777;
+  --color-brand-mint: #047857;
+  --color-brand-amber: #D97706;
+  --color-brand-yellow: #FBBF24;
+  --color-brand-text: #0A0A0A;
+  --color-brand-border: #0A0A0A;
+}
+
+body {
+  background-color: var(--color-brand-bg);
+  color: var(--color-brand-text);
+  font-family: 'Space Grotesk', sans-serif;
+  overflow-x: hidden;
+  background-image: 
+    linear-gradient(rgba(10,10,10,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(10,10,10,0.06) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* ─── NEUBRUTALISM CORE ─────────────────────── */
+.nb-card {
+  background: white;
+  border: 3px solid #0A0A0A;
+  box-shadow: 6px 6px 0px #0A0A0A;
+  border-radius: 0px;
+}
+
+.nb-card-yellow {
+  background: #FBBF24;
+  border: 3px solid #0A0A0A;
+  box-shadow: 6px 6px 0px #0A0A0A;
+}
+
+.nb-card-blue {
+  background: #BFDBFE;
+  border: 3px solid #0A0A0A;
+  box-shadow: 6px 6px 0px #0A0A0A;
+}
+
+.nb-card-pink {
+  background: #FBCFE8;
+  border: 3px solid #0A0A0A;
+  box-shadow: 6px 6px 0px #0A0A0A;
+}
+
+.nb-card-mint {
+  background: #A7F3D0;
+  border: 3px solid #0A0A0A;
+  box-shadow: 6px 6px 0px #0A0A0A;
+}
+
+.nb-btn {
+  border: 3px solid #0A0A0A;
+  box-shadow: 4px 4px 0px #0A0A0A;
+  font-weight: 900;
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: -0.01em;
+  transition: all 0.1s ease;
+  border-radius: 0px;
+}
+
+.nb-btn:hover {
+  box-shadow: 2px 2px 0px #0A0A0A;
+  transform: translate(2px, 2px);
+}
+
+.nb-btn:active {
+  box-shadow: 0px 0px 0px #0A0A0A;
+  transform: translate(4px, 4px);
+}
+
+.nb-input {
+  border: 3px solid #0A0A0A;
+  box-shadow: 4px 4px 0px #0A0A0A;
+  border-radius: 0px;
+  background: white;
+  font-weight: 600;
+  font-family: 'Space Grotesk', sans-serif;
+  transition: box-shadow 0.1s ease;
+}
+
+.nb-input:focus {
+  outline: none;
+  box-shadow: 6px 6px 0px #1D4ED8;
+  border-color: #1D4ED8;
+}
+
+.nb-tag {
+  border: 2px solid #0A0A0A;
+  box-shadow: 2px 2px 0px #0A0A0A;
+  border-radius: 0px;
+  font-weight: 800;
+  font-size: 0.75rem;
+  padding: 3px 10px;
+}
+
+/* ─── DISPLAY HEADINGS ─── */
+.font-display {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.font-mono-bold {
+  font-family: 'DM Mono', monospace;
+  font-weight: 700;
+}
+
+/* ─── SECTION TITLE STAMP ─── */
+.section-stamp {
+  display: inline-block;
+  border: 4px solid #0A0A0A;
+  box-shadow: 8px 8px 0px #0A0A0A;
+  padding: 8px 24px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 900;
+}
+
+/* ─── MARQUEE TICKER ─── */
+.ticker-wrap {
+  border-top: 3px solid #0A0A0A;
+  border-bottom: 3px solid #0A0A0A;
+  background: #0A0A0A;
+  overflow: hidden;
+}
+
+.ticker-inner {
+  display: flex;
+  white-space: nowrap;
+  animation: ticker 30s linear infinite;
+}
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ─── SKILL SCROLL ─── */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes scroll-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+.animate-scroll {
+  animation: scroll 35s linear infinite;
+}
+.animate-scroll-reverse {
+  animation: scroll-reverse 35s linear infinite;
+}
+.pause-on-hover:hover {
+  animation-play-state: paused;
+}
+
+/* ─── STICKER ─── */
+.sticker {
+  border: 3px solid #0A0A0A;
+  box-shadow: 4px 4px 0px #0A0A0A;
+  font-weight: 900;
+  line-height: 1;
+}

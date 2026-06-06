@@ -1,0 +1,105 @@
+module.exports = [
+"[project]/OneDrive/Documents/portfolio-improved/dictionaries/id.json.[json].cjs [app-rsc] (ecmascript)", ((__turbopack_context__, module, exports) => {
+
+module.exports = {
+    "navbar": {
+        "home": "Beranda",
+        "about": "Tentang",
+        "projects": "Proyek"
+    },
+    "hero": {
+        "greeting": "Halo, Saya",
+        "role": "Full Stack Web Developer",
+        "tagline": "Membangun aplikasi web yang responsif, fungsional, dan mudah digunakan — dari perancangan database hingga implementasi fitur.",
+        "ctaProjects": "Lihat Proyek",
+        "ctaContact": "Hubungi Saya"
+    },
+    "about": {
+        "sectionTitle": "ABOUT ME",
+        "greeting": "SAYA",
+        "name": "NAUFAL KASYFA",
+        "role": "FULL STACK WEB DEVELOPER",
+        "bio": "Full Stack Web Developer junior dengan pengalaman membangun website company profile, marketplace, e-commerce, dan sistem manajemen data berbasis web.\n\nMenguasai PHP, Laravel, MySQL, JavaScript, HTML, dan CSS. Antusias mempelajari teknologi baru dan siap membantu bisnis maupun individu mewujudkan solusi digital yang efektif.",
+        "downloadCv": "UNDUH CV"
+    },
+    "skills": {
+        "title": "Keahlian",
+        "accent": "Teknis"
+    },
+    "experience": {
+        "title": "Pengalaman",
+        "accent": "Kerja",
+        "technologiesLabel": "Teknologi yang Digunakan",
+        "list": [
+            {
+                "company": "PT. Bormen Mitra Sentosa",
+                "role": "IT Intern",
+                "period": "Jul 2025 - Agu 2025",
+                "location": "Bogor, Indonesia",
+                "description": [
+                    "Mendesain template produk untuk kebutuhan promosi dan branding perusahaan.",
+                    "Mengembangkan website company profile perusahaan untuk menampilkan profil, layanan, dan informasi produk secara profesional.",
+                    "Berpartisipasi dalam pengembangan website e-commerce perusahaan untuk mendukung penjualan produk secara digital.",
+                    "Berkolaborasi dengan tim untuk mendukung kebutuhan digitalisasi perusahaan."
+                ],
+                "technologies": [
+                    "PHP",
+                    "Laravel",
+                    "MySQL",
+                    "HTML",
+                    "CSS",
+                    "JavaScript"
+                ]
+            },
+            {
+                "company": "PT. Khairunnisa",
+                "role": "Social Media Specialist",
+                "period": "Jul 2021 - Okt 2021",
+                "location": "Bogor, Indonesia",
+                "description": [
+                    "Mendesain konten kreatif untuk kebutuhan promosi dan pemasaran.",
+                    "Membuat konten visual untuk media sosial seperti Instagram dan Facebook sesuai kebutuhan brand.",
+                    "Berkolaborasi dengan tim pemasaran dalam merancang kampanye digital yang efektif dan responsif terhadap tren."
+                ],
+                "technologies": [
+                    "Canva",
+                    "CapCut",
+                    "PicsArt",
+                    "Instagram",
+                    "Facebook"
+                ]
+            }
+        ]
+    },
+    "certificates": {
+        "title": "Sertifikat &",
+        "accent": "Penghargaan"
+    },
+    "projects": {
+        "title": "Karya",
+        "accent": "Terbaik",
+        "subtitle": "Kumpulan proyek yang telah saya bangun, mulai dari sistem absensi hingga aplikasi marketplace yang lengkap.",
+        "drawer": {
+            "close": "Tutup",
+            "techStack": "Teknologi yang Digunakan",
+            "viewLive": "Lihat Proyek Asli",
+            "sourceCode": "Kode Sumber"
+        }
+    },
+    "contact": {
+        "title": "Hubungi",
+        "accent": "Saya",
+        "subtitle": "Punya ide proyek, pertanyaan, atau sekadar ingin menyapa? Jangan ragu untuk mengirimkan pesan. Saya selalu terbuka untuk peluang kolaborasi baru.",
+        "name": "Nama Lengkap",
+        "namePlaceholder": "Masukkan nama Anda",
+        "email": "Alamat Email",
+        "emailPlaceholder": "nama@email.com",
+        "message": "Pesan",
+        "messagePlaceholder": "Ceritakan tentang proyek atau ide Anda...",
+        "send": "Kirim Pesan"
+    }
+};
+}),
+];
+
+//# sourceMappingURL=OneDrive_Documents_portfolio-improved_dictionaries_id_json_%5Bjson%5D_cjs_0xz-.05._.js.map
