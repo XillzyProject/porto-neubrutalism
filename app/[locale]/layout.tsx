@@ -11,7 +11,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "M. Naufal Kasyfa Jamal | Full Stack Web Developer Portfolio",
+  title: "ell-ksyfa | Portfolio",
   description:
     "Website portofolio personal M. Naufal Kasyfa Jamal, seorang Full Stack Web Developer yang berfokus pada Laravel, PHP, dan MySQL.",
 };
