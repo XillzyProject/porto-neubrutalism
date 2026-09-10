@@ -23,14 +23,14 @@ export default function Hero({ dict }: HeroProps) {
         </div>
       </div>
 
-      <div className="flex flex-col-reverse md:flex-row items-center gap-12 md:gap-16">
+      <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12 md:gap-8 lg:gap-16">
         
         {/* Left Column */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
-          className="flex-1 space-y-7 text-left"
+          className="flex-1 md:flex-[1.1] space-y-7 text-left"
         >
           {/* Greeting badge */}
           <motion.div
@@ -113,13 +113,13 @@ export default function Hero({ dict }: HeroProps) {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex-1 flex w-full justify-center md:justify-end px-4 sm:px-8"
+          className="flex-[1.35] flex w-full justify-center md:justify-end px-4 sm:px-8"
         >
-          <div className="relative w-full max-w-[320px] sm:max-w-sm md:max-w-md mx-auto md:mr-2">
+          <div className="relative w-full max-w-[340px] sm:max-w-[400px] md:max-w-[700px] lg:max-w-[820px] mx-auto md:mr-8 lg:-mr-20 mt-12 md:-mt-8 lg:-mt-16 translate-x-2 md:translate-x-0">
             <img
               src="/images/hero-final.webp"
               alt="M. Naufal Kasyfa Jamal"
-              className="w-full h-auto"
+              className="w-full h-auto hover:-translate-y-2 transition-transform duration-300"
             />
           </div>
         </motion.div>
