@@ -1,8 +1,6 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-
-const locales = ["id", "en"];
-const defaultLocale = "id";
+import { locales, defaultLocale } from "./lib/dictionary";
 
 // Fungsi native untuk mendeteksi bahasa browser tanpa eksternal library
 function getLocale(request: NextRequest): string {

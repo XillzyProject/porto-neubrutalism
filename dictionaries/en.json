@@ -67,7 +67,12 @@
       "close": "Close",
       "techStack": "Technologies Used",
       "viewLive": "View Live Project",
-      "sourceCode": "Source Code"
+      "sourceCode": "Source Code",
+      "detail": "View Full Detail Page"
+    },
+    "detail": {
+      "back": "Back to Home",
+      "techStack": "Technologies Used"
     }
   },
   "contact": {

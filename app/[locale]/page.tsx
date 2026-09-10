@@ -35,7 +35,7 @@ export default async function Home({ params }: { params: any }) {
 
       {/* 6. Projects Section */}
       {/* Kita passing dict khusus proyek dan array data projects-nya */}
-      {dict?.projects && <Projects dict={dict.projects} projects={projects} />}
+      {dict?.projects && <Projects dict={dict.projects} projects={projects} locale={locale} />}
 
       {/* 7. Contact Section */}
       {dict?.contact && <Contact dict={dict.contact} />}

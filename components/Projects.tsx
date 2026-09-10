@@ -7,9 +7,10 @@ import ProjectDrawer from "@/components/ProjectDrawer";
 interface ProjectsProps {
   dict: any;
   projects: any[];
+  locale?: string;
 }
 
-export default function Projects({ dict, projects }: ProjectsProps) {
+export default function Projects({ dict, projects, locale = "id" }: ProjectsProps) {
   const [selectedProject, setSelectedProject] = useState<any | null>(null);
 
   return (
@@ -18,7 +19,7 @@ export default function Projects({ dict, projects }: ProjectsProps) {
 
         {/* Section label */}
         <div className="flex items-center gap-4 mb-12">
-          <span className="font-mono-bold text-xs uppercase tracking-[0.3em] text-brand-text/50">04</span>
+          <span className="font-mono-bold text-xs uppercase tracking-[0.3em] text-brand-text/50">05</span>
           <div className="h-[2px] w-16 bg-brand-text/20" />
           <span className="section-stamp bg-[#A7F3D0] text-brand-text text-sm uppercase tracking-widest font-black">
             {dict.title}{" "}
@@ -38,7 +39,10 @@ export default function Projects({ dict, projects }: ProjectsProps) {
           {projects.map((project, index) => (
             <div
               key={project.slug}
+              role="button"
+              tabIndex={0}
               onClick={() => setSelectedProject(project)}
+              onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setSelectedProject(project); } }}
               className="cursor-pointer"
             >
               <ProjectCard project={project} index={index} />
@@ -52,6 +56,7 @@ export default function Projects({ dict, projects }: ProjectsProps) {
         onClose={() => setSelectedProject(null)}
         project={selectedProject}
         dict={dict.drawer}
+        locale={locale}
       />
     </section>
   );

@@ -7,11 +7,10 @@ export interface Project {
   meta: {
     title?: string;
     description?: string;
-    tech?: string[];
-    color?: string;
-    liveUrl?: string;
-    githubUrl?: string;
     image?: string;
+    tags?: string[];
+    link?: string;
+    github?: string;
   };
   content: string;
 }

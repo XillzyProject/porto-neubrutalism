@@ -61,7 +61,7 @@ export default function Contact({ dict }: ContactProps) {
 
         {/* Section label */}
         <div className="flex items-center gap-4 mb-12">
-          <span className="font-mono-bold text-xs uppercase tracking-[0.3em] text-brand-text/50">05</span>
+          <span className="font-mono-bold text-xs uppercase tracking-[0.3em] text-brand-text/50">06</span>
           <div className="h-[2px] w-16 bg-brand-text/20" />
           <span className="section-stamp bg-[#FBCFE8] text-brand-text text-sm uppercase tracking-widest font-black">
             {dict.title}{" "}

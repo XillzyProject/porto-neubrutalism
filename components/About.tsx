@@ -40,7 +40,7 @@ export default function About({ dict }: AboutProps) {
           <div className="absolute inset-0 bg-[#FBCFE8] translate-x-2.5 translate-y-2.5" style={{ border: '3px solid #0A0A0A' }} />
           <div className="relative aspect-[4/5] overflow-hidden z-10" style={{ border: '4px solid #0A0A0A' }}>
             <img
-              src="/images/about.jpg"
+              src="/images/hero.webp"
               alt="Profil"
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
             />

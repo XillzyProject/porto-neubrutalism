@@ -2,37 +2,34 @@
 
 import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ExternalLink, Code2 } from "lucide-react";
-
-const getTechIcon = (tag: string) => {
-  const icons: Record<string, string> = {
-    "Laravel": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg",
-    "ReactJS": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-    "Tailwind CSS": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
-    "MySQL": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
-    "PostgreSQL": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
-    "Figma": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg",
-    "WordPress": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain.svg",
-    "PHP": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg",
-    "Bootstrap": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg",
-  };
-  return icons[tag];
-};
+import { X, ExternalLink, Code2, ArrowUpRight } from "lucide-react";
+import Link from "next/link";
+import { getTechIcon } from "@/lib/techIcons";
 
 interface ProjectDrawerProps {
   isOpen: boolean;
   onClose: () => void;
   project: any | null;
   dict: any;
+  locale?: string;
 }
 
-export default function ProjectDrawer({ isOpen, onClose, project, dict }: ProjectDrawerProps) {
+export default function ProjectDrawer({ isOpen, onClose, project, dict, locale = "id" }: ProjectDrawerProps) {
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "unset";
     return () => { document.body.style.overflow = "unset"; };
   }, [isOpen]);
 
+  // Tutup drawer dengan Escape
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKey = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
+    document.addEventListener("keydown", handleKey);
+    return () => document.removeEventListener("keydown", handleKey);
+  }, [isOpen, onClose]);
+
   const data = project?.frontmatter || project?.meta || project || {};
+  const slug = project?.slug;
   const title = data.title || "Proyek Tanpa Judul";
   const description = data.description || "Deskripsi proyek belum ditambahkan.";
   const image = data.image || "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800";
@@ -57,6 +54,8 @@ export default function ProjectDrawer({ isOpen, onClose, project, dict }: Projec
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", damping: 28, stiffness: 220 }}
+            role="dialog"
+            aria-label={title}
             className="fixed top-0 right-0 h-[100dvh] w-full md:w-[580px] bg-brand-bg z-[70] overflow-y-auto flex flex-col"
             style={{ borderLeft: '4px solid #0A0A0A', boxShadow: '-8px 0 0 #0A0A0A' }}
           >
@@ -119,6 +118,16 @@ export default function ProjectDrawer({ isOpen, onClose, project, dict }: Projec
                   </a>
                 )}
               </div>
+
+              {slug && (
+                <Link
+                  href={`/${locale}/projects/${slug}`}
+                  onClick={onClose}
+                  className="mt-4 inline-flex justify-center items-center gap-2 w-full text-sm font-black uppercase tracking-widest text-brand-text/70 hover:text-brand-text underline decoration-2 underline-offset-4 transition-colors"
+                >
+                  {dict?.detail} <ArrowUpRight className="w-4 h-4" strokeWidth={3} />
+                </Link>
+              )}
             </div>
           </motion.div>
         </>

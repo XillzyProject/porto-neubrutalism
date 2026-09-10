@@ -29,7 +29,7 @@ export default function Experience({ dict }: ExperienceProps) {
       <div className="max-w-5xl mx-auto md:px-0 relative z-10">
         {/* Section label */}
         <div className="flex items-center gap-4 mb-12">
-          <span className="font-mono-bold text-xs uppercase tracking-[0.3em] text-brand-text/50">03</span>
+          <span className="font-mono-bold text-xs uppercase tracking-[0.3em] text-brand-text/50">04</span>
           <div className="h-[2px] w-16 bg-brand-text/20" />
           <span className="section-stamp bg-[#DDD6FE] text-brand-text text-sm uppercase tracking-widest font-black">
             {dict.title}{" "}

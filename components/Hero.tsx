@@ -68,7 +68,7 @@ export default function Hero({ dict }: HeroProps) {
               {dict.role}
             </span>
             <span className="font-mono-bold text-brand-text/40 text-sm uppercase tracking-widest">
-              // Bogor, Indonesia
+              {"// Bogor, Indonesia"}
             </span>
           </div>
 
@@ -108,54 +108,29 @@ export default function Hero({ dict }: HeroProps) {
           </div>
         </motion.div>
 
-        {/* Right Column: Profile Card */}
+        {/* Right Column: Hero Image */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex-1 flex justify-center md:justify-end"
+          className="flex-1 flex w-full justify-center md:justify-end"
         >
-          <div className="relative w-full max-w-sm">
-            {/* Layered shadow blocks */}
-            <div className="absolute inset-0 bg-brand-pink translate-x-6 translate-y-6" style={{border:'3px solid #0A0A0A'}} />
-            <div className="absolute inset-0 bg-brand-yellow translate-x-3 translate-y-3" style={{border:'3px solid #0A0A0A'}} />
-
+          <div className="relative w-full max-w-[320px] sm:max-w-sm md:max-w-[360px] mx-auto md:mr-2">
+            <div className="absolute inset-0 bg-brand-pink translate-x-5 translate-y-5" style={{border:'3px solid #0A0A0A'}} />
+            <div className="absolute inset-0 bg-brand-yellow translate-x-2.5 translate-y-2.5" style={{border:'3px solid #0A0A0A'}} />
             <div
-              className="relative aspect-[3/4] w-full overflow-hidden"
+              className="relative aspect-[3/4] w-full overflow-hidden bg-white"
               style={{border:'4px solid #0A0A0A'}}
             >
               <img
-                src="images/hero.webp"
+                src="/images/hero1.png"
                 alt="M. Naufal Kasyfa Jamal"
-                className="w-full h-full object-cover"
+                className="h-full w-full object-cover object-center"
               />
-
-              {/* Bottom strip */}
-              <div className="absolute bottom-0 left-0 right-0 bg-brand-yellow p-4" style={{borderTop:'3px solid #0A0A0A'}}>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <img
-                      src="/images/hero2.webp"
-                      alt="Profil"
-                      className="w-10 h-10 object-cover"
-                      style={{border:'2px solid #0A0A0A'}}
-                    />
-                    <div>
-                      <p className="font-black text-brand-text leading-tight">@imxillzy</p>
-                      <div className="flex items-center gap-1.5">
-                        <div className="w-2 h-2 bg-brand-mint rounded-full" style={{border:'1px solid #0A0A0A'}} />
-                        <p className="text-xs font-black">Available</p>
-                      </div>
-                    </div>
-                  </div>
-                  <a href="#contact" className="px-4 py-1.5 bg-brand-text text-white text-xs font-black nb-btn">
-                    Hire Me →
-                  </a>
-                </div>
-              </div>
             </div>
           </div>
         </motion.div>
+
       </div>
 
       {/* Bottom ticker */}

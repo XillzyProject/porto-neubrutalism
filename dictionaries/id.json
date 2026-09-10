@@ -67,7 +67,12 @@
       "close": "Tutup",
       "techStack": "Teknologi yang Digunakan",
       "viewLive": "Lihat Proyek Asli",
-      "sourceCode": "Kode Sumber"
+      "sourceCode": "Kode Sumber",
+      "detail": "Halaman Detail Lengkap"
+    },
+    "detail": {
+      "back": "Kembali ke Beranda",
+      "techStack": "Teknologi yang Digunakan"
     }
   },
   "contact": {
