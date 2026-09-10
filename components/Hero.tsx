@@ -115,20 +115,12 @@ export default function Hero({ dict }: HeroProps) {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="flex-1 flex w-full justify-center md:justify-end px-4 sm:px-8"
         >
-          <div className="relative w-full max-w-[280px] sm:max-w-[320px] md:max-w-md mx-auto md:mr-8 mt-12 md:mt-0">
-            <div className="absolute inset-0 bg-brand-pink translate-x-5 translate-y-5" style={{border:'3px solid #0A0A0A'}} />
-            <div className="absolute inset-0 bg-brand-yellow translate-x-2.5 translate-y-2.5" style={{border:'3px solid #0A0A0A'}} />
-            <div
-              className="relative aspect-square w-full bg-white"
-              style={{border:'4px solid #0A0A0A'}}
-            >
-              {/* Gambar sengaja lebih besar dari kartu agar badge ilustrasi menjorok keluar bingkai, sesuai mockup */}
-              <img
-                src="/images/foto-beranda.webp"
-                alt="M. Naufal Kasyfa Jamal"
-                className="absolute left-1/2 top-1/2 w-[125%] -translate-x-1/2 -translate-y-1/2"
-              />
-            </div>
+          <div className="relative w-full max-w-[320px] sm:max-w-sm md:max-w-md mx-auto md:mr-2">
+            <img
+              src="/images/hero-final.webp"
+              alt="M. Naufal Kasyfa Jamal"
+              className="w-full h-auto"
+            />
           </div>
         </motion.div>
 
