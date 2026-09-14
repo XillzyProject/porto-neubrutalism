@@ -15,7 +15,7 @@ interface HeroProps {
 
 export default function Hero({ dict }: HeroProps) {
   return (
-    <section id="home" className="py-12 md:py-20 scroll-mt-28 relative">
+    <section id="home" className="py-3 md:py-20 scroll-mt-28 relative">
       {/* Decorative corner stamp */}
       <div className="absolute top-6 right-0 hidden lg:block">
         <div className="bg-brand-pink text-white px-4 py-2 rotate-2 sticker text-sm uppercase tracking-widest">
@@ -23,7 +23,7 @@ export default function Hero({ dict }: HeroProps) {
         </div>
       </div>
 
-      <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12 md:gap-8 lg:gap-16">
+      <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-5 md:gap-8 lg:gap-16">
         
         {/* Left Column */}
         <motion.div
@@ -115,7 +115,7 @@ export default function Hero({ dict }: HeroProps) {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="flex-[1.35] flex w-full justify-center md:justify-end px-4 sm:px-8"
         >
-          <div className="relative w-full max-w-[340px] sm:max-w-[400px] md:max-w-[700px] lg:max-w-[820px] mx-auto md:mr-8 lg:-mr-20 mt-12 md:-mt-8 lg:-mt-16 translate-x-2 md:translate-x-0">
+          <div className="relative w-full max-w-[340px] sm:max-w-[400px] md:max-w-[700px] lg:max-w-[820px] mx-auto md:mr-8 lg:-mr-20 mt-2 md:-mt-16 lg:-mt-32 translate-x-2 md:translate-x-0">
             <img
               src="/images/hero-final.webp"
               alt="M. Naufal Kasyfa Jamal"
